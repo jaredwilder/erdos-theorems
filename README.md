@@ -19,6 +19,16 @@ which is Lean's standard classical foundation. No `sorry`, no `native_decide`, n
 axiom, no unverified import. Each file ships with its `.axioms.txt` naming the footprint of every
 declaration, its `.sha256`, and the kernel `.verify.json`.
 
+**One exception, found by re-counting the repository on 2026-09-11 rather than trusting this
+paragraph:** `theorems/erdos289-campaign-001/Erdos289Head.lean` ships its `.axioms.txt` (five
+declarations, every one `[propext, Classical.choice, Quot.sound]`) but **no `.verify.json`**. It is
+the only file of the twenty missing one. The axiom footprint is present and clean; the kernel run
+receipt is not, so that file's footprint has not been re-confirmed here from a shipped kernel log.
+
+The same re-count confirmed the rest: **20 files, 79 declarations, 79 clean footprints, 0 carrying
+any other axiom**, and the per-file table below matches the shipped axiom receipts file by file with
+no mismatches.
+
 **Count of declarations here carrying any other axiom: 0.**
 
 ## What this does and does not claim
