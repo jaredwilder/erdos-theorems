@@ -1,7 +1,6 @@
 # erdos-theorems
 
-Kernel-verified Lean 4 theorems produced while attacking open Erdos problems. **79 declarations
-across 20 files and 15 problems. Every declaration has a clean axiom footprint.**
+Kernel-verified Lean 4 theorems produced while attacking open Erdős problems. **79 declarations across 20 files and 15 problems. Every declaration has a clean axiom footprint.**
 
 Author: Jared Wilder. First public timestamp: 2026-09-10.
 
@@ -15,45 +14,30 @@ Every declaration here was checked with `#print axioms` and depends on nothing o
 
     {propext, Classical.choice, Quot.sound}
 
-which is Lean's standard classical foundation. No `sorry`, no `native_decide`, no hand-declared
-axiom, no unverified import. Each file ships with its `.axioms.txt` naming the footprint of every
-declaration, its `.sha256`, and the kernel `.verify.json`.
+which is Lean's standard classical foundation. No `sorry`, no `native_decide`, no hand-declared axiom, no unverified import. Each file ships with its `.axioms.txt` naming the footprint of every declaration, its `.sha256`, and the kernel `.verify.json`.
 
-**One exception, found by re-counting the repository on 2026-09-11 rather than trusting this
-paragraph:** `theorems/erdos289-campaign-001/Erdos289Head.lean` ships its `.axioms.txt` (five
-declarations, every one `[propext, Classical.choice, Quot.sound]`) but **no `.verify.json`**. It is
-the only file of the twenty missing one. The axiom footprint is present and clean; the kernel run
-receipt is not, so that file's footprint has not been re-confirmed here from a shipped kernel log.
+**One exception, found by re-counting the repository on 2026-09-11 rather than trusting this paragraph:** `theorems/erdos289-campaign-001/Erdos289Head.lean` ships its `.axioms.txt` (five declarations, every one `[propext, Classical.choice, Quot.sound]`) but **no `.verify.json`**. It is the only file of the twenty missing one. The axiom footprint is present and clean; the kernel run receipt is not, so that file's footprint has not been re-confirmed here from a shipped kernel log.
 
-The same re-count confirmed the rest: **20 files, 79 declarations, 79 clean footprints, 0 carrying
-any other axiom**, and the per-file table below matches the shipped axiom receipts file by file with
-no mismatches.
+The same re-count confirmed the rest: **20 files, 79 declarations, 79 clean footprints, 0 carrying any other axiom**, and the per-file table below matches the shipped axiom receipts file by file with no mismatches.
 
 **Count of declarations here carrying any other axiom: 0.**
 
-## What this does and does not claim
+## Mathematical scope and standout result
 
-These are proved theorems. They are **not** solutions to the Erdos problems they sit under. Most
-are lemmas, bounds, finite exhaustions, special cases, or structural results obtained on the way to
-a problem that remains open. Read each statement; it says exactly what it proves.
+These are proved theorems at the scopes of their statements: structural lemmas, bounds, finite exhaustions, special cases, and standalone consequences extracted from larger Erdős campaigns. Their status is determined by the theorem statement itself rather than inherited from the larger problem under which the theorem was discovered.
 
-The one result worth singling out: `Erdos949Hindman.lean` proves a countable analogue of Erdos
-problem 949, via Mathlib's Hindman theorem, in 13 declarations with a clean footprint, together
-with a non-vacuity control. `Erdos949HindmanFS.lean` extends it to full finite sums in 16. This
-isolates the jump from countable to continuum as the remaining difficulty in that problem. As far
-as the author can determine it is not recorded on the problem's page, which is a statement about
-the author's search and not a novelty claim adjudicated by anyone else.
+The result worth singling out is `Erdos949Hindman.lean`: a countable analogue of Erdős problem 949, proved via Mathlib's Hindman theorem in 13 declarations with a clean footprint and a non-vacuity control. `Erdos949HindmanFS.lean` extends this to full finite sums in 16 declarations. Together they isolate the countable theorem cleanly and identify the jump to the continuum formulation as the remaining larger-problem frontier.
+
+As far as the author can determine, this countable formulation is not recorded on the problem's page. That records the result of the author's search; historical novelty remains a separate literature question.
 
 ## Verifying this yourself
 
-Each `.lean` file is self contained against Mathlib. Compile it and run `#print axioms` on any
-declaration; the result should match the shipped `.axioms.txt`. If it does not, the file is wrong
-and an issue is welcome.
+Each `.lean` file is self contained against Mathlib. Compile it and run `#print axioms` on any declaration; the result should match the shipped `.axioms.txt`. If it does not, the file is wrong and an issue is welcome.
 
 ## Contents
 
 | problem | file | declarations | all clean axioms |
-|---|---|---|---|
+|---|---|---:|---|
 | cover-C13-6-3 | `Cover20Degree.lean` | 2 | yes |
 | erdos1061-campaign-001 | `Erdos1061Sigma.lean` | 2 | yes |
 | erdos1084-harborth-2026-09-02 | `Erdos1084Lower.lean` | 12 | yes |
