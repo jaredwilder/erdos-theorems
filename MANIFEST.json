@@ -1,0 +1,314 @@
+{
+ "release": "erdos-theorems",
+ "author": "Jared Wilder",
+ "generated_utc": "2026-09-11T01:11:47.150419+00:00",
+ "clean_axiom_footprint": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "file_count": 20,
+ "declarations_clean": 79,
+ "declarations_other": 0,
+ "files": [
+  {
+   "campaign": "cover-C13-6-3",
+   "file": "theorems/cover-C13-6-3/Cover20Degree.lean",
+   "sha256": "3c67efa5302e800fd55f05e5a5d052dcd45ecea399b7d9599bbe07d933aac4b5",
+   "bytes": 4846,
+   "declarations_total": 2,
+   "declarations_clean_axioms": [
+    "cover20_pair_count",
+    "cover20_point_degree"
+   ],
+   "declarations_other_axioms": {},
+   "kernel_status": "VERIFIED"
+  },
+  {
+   "campaign": "erdos1061-campaign-001",
+   "file": "theorems/erdos1061-campaign-001/Erdos1061Sigma.lean",
+   "sha256": "847dd240164c2bf65fd490eb8a668f136b9b9ce259bce814e8750c0090c26d19",
+   "bytes": 2244,
+   "declarations_total": 2,
+   "declarations_clean_axioms": [
+    "erdos1061_no_equal_split",
+    "erdos1061_sigma_double"
+   ],
+   "declarations_other_axioms": {},
+   "kernel_status": "VERIFIED"
+  },
+  {
+   "campaign": "erdos1084-harborth-2026-09-02",
+   "file": "theorems/erdos1084-harborth-2026-09-02/Erdos1084Lower.lean",
+   "sha256": "eabb57f873d36bca83d24b3e7616fe053627179e8b82a05fff730820b97485ac",
+   "bytes": 12204,
+   "declarations_total": 12,
+   "declarations_clean_axioms": [
+    "Erdos1084.dist_P_sq",
+    "Erdos1084.hex_lower",
+    "Erdos1084.le_f",
+    "Erdos1084.lower_127",
+    "Erdos1084.lower_k0",
+    "Erdos1084.lower_k1",
+    "Erdos1084.lower_k2",
+    "Erdos1084.lower_k3",
+    "Erdos1084.lower_k4",
+    "Erdos1084.lower_k5",
+    "Erdos1084.lower_k6",
+    "Erdos1084.unitDistNum_image"
+   ],
+   "declarations_other_axioms": {},
+   "kernel_status": "VERIFIED"
+  },
+  {
+   "campaign": "erdos276-campaign-001",
+   "file": "theorems/erdos276-campaign-001/Erdos276Corollary.lean",
+   "sha256": "565de68c3f9a826ddb64246082a2e64c6eb255998e24868643ecd62f3ac1f3ff",
+   "bytes": 1450,
+   "declarations_total": 2,
+   "declarations_clean_axioms": [
+    "erdos276_common_divisor_iff",
+    "erdos276_coprime_seeds_no_common_divisor"
+   ],
+   "declarations_other_axioms": {},
+   "kernel_status": "VERIFIED"
+  },
+  {
+   "campaign": "erdos289-campaign-001",
+   "file": "theorems/erdos289-campaign-001/Erdos289Head.lean",
+   "sha256": "5da8b478fba0a13b7a96530d909ffcd1ae09c7b88e41b95906e91ce5ed1f2bc0",
+   "bytes": 2480,
+   "declarations_total": 5,
+   "declarations_clean_axioms": [
+    "F1_head_forced",
+    "F1_tail_value",
+    "W4_bridge",
+    "W4_fragment",
+    "W4_nat_fragment"
+   ],
+   "declarations_other_axioms": {},
+   "kernel_status": null
+  },
+  {
+   "campaign": "erdos289-campaign-001",
+   "file": "theorems/erdos289-campaign-001/msl_erdos289_a_m01_c1.lean",
+   "sha256": "308ec92393c9f3e3cdfbbe164cf94ebef6451f97a6db6513d4753d31cb1d14d3",
+   "bytes": 2643,
+   "declarations_total": 1,
+   "declarations_clean_axioms": [
+    "msl_erdos289_a_m01_c1"
+   ],
+   "declarations_other_axioms": {},
+   "kernel_status": "VERIFIED"
+  },
+  {
+   "campaign": "erdos289-campaign-001",
+   "file": "theorems/erdos289-campaign-001/msl_erdos289_a_m01_c2.lean",
+   "sha256": "23a75be9998e996ee872d22625b03d2b332d50297cef7ded710fac7bc480381d",
+   "bytes": 1654,
+   "declarations_total": 1,
+   "declarations_clean_axioms": [
+    "msl_erdos289_a_m01_c2"
+   ],
+   "declarations_other_axioms": {},
+   "kernel_status": "VERIFIED"
+  },
+  {
+   "campaign": "erdos313-campaign-001",
+   "file": "theorems/erdos313-campaign-001/Erdos313Head.lean",
+   "sha256": "8d7a712a9a0207f6b475e659a556ccc5df2d40443f45cc1afedbad4169ec51f4",
+   "bytes": 1014,
+   "declarations_total": 2,
+   "declarations_clean_axioms": [
+    "erdos313_head_m",
+    "erdos313_head_prune"
+   ],
+   "declarations_other_axioms": {},
+   "kernel_status": "VERIFIED"
+  },
+  {
+   "campaign": "erdos400-campaign-001",
+   "file": "theorems/erdos400-campaign-001/Erdos400Witness.lean",
+   "sha256": "6701254928c06ec614df3c021ee0d09f26091cbc7dc06cafd52d216244fc08c9",
+   "bytes": 1034,
+   "declarations_total": 3,
+   "declarations_clean_axioms": [
+    "erdos400_factorial_identity",
+    "erdos400_witness_divides",
+    "erdos400_witness_excess"
+   ],
+   "declarations_other_axioms": {},
+   "kernel_status": "VERIFIED"
+  },
+  {
+   "campaign": "erdos412-campaign-001",
+   "file": "theorems/erdos412-campaign-001/Erdos412Sigma.lean",
+   "sha256": "a087e628b0a2ce4660b8dd7372fd0b868d12c51ae665b7f04075fec1f1a2bdbc",
+   "bytes": 1773,
+   "declarations_total": 4,
+   "declarations_clean_axioms": [
+    "erdos412_iter_ge_two",
+    "erdos412_iter_strict",
+    "erdos412_sigma_eq_iff",
+    "erdos412_sigma_ge"
+   ],
+   "declarations_other_axioms": {},
+   "kernel_status": "VERIFIED"
+  },
+  {
+   "campaign": "erdos456-campaign-001",
+   "file": "theorems/erdos456-campaign-001/Erdos456Equality.lean",
+   "sha256": "225a060b776aa83ff3d2d61aa2ee84760598b12f2e6c4ede7a63926efce29fde",
+   "bytes": 1514,
+   "declarations_total": 2,
+   "declarations_clean_axioms": [
+    "erdos456_m_eq_p",
+    "erdos456_p_eq_p"
+   ],
+   "declarations_other_axioms": {},
+   "kernel_status": "VERIFIED"
+  },
+  {
+   "campaign": "erdos477-campaign-001",
+   "file": "theorems/erdos477-campaign-001/Erdos477NoSquareTiling.lean",
+   "sha256": "73d31fb49c3c406a48386f5e2261118535c6c732ceb1207da822493febd60802",
+   "bytes": 2305,
+   "declarations_total": 2,
+   "declarations_clean_axioms": [
+    "erdos477_no_square_tiling",
+    "erdos477_sq_sub_sq_of_mod_four"
+   ],
+   "declarations_other_axioms": {},
+   "kernel_status": "VERIFIED"
+  },
+  {
+   "campaign": "erdos479-campaign-001",
+   "file": "theorems/erdos479-campaign-001/Erdos479Family.lean",
+   "sha256": "b36c7078f0af300c515b60ba8321264de54a7b84df0a96e3529340cb19428383",
+   "bytes": 1590,
+   "declarations_total": 1,
+   "declarations_clean_axioms": [
+    "erdos479_family"
+   ],
+   "declarations_other_axioms": {},
+   "kernel_status": "VERIFIED"
+  },
+  {
+   "campaign": "erdos479-campaign-001",
+   "file": "theorems/erdos479-campaign-001/Erdos479LTE.lean",
+   "sha256": "88f7aa08f802d9efefdc0ea9822faef1cdf33af53382b00ed5d242400b358cdd",
+   "bytes": 1541,
+   "declarations_total": 2,
+   "declarations_clean_axioms": [
+    "erdos479_k_neg_one",
+    "erdos479_lte"
+   ],
+   "declarations_other_axioms": {},
+   "kernel_status": "VERIFIED"
+  },
+  {
+   "campaign": "erdos700-campaign-001",
+   "file": "theorems/erdos700-campaign-001/Erdos700Semiprime.lean",
+   "sha256": "bbb804cfc6bf93c80cb828eadf17833dfb8e0f2e9645f0a7e6aea85079c473ca",
+   "bytes": 5619,
+   "declarations_total": 2,
+   "declarations_clean_axioms": [
+    "erdos700_choose_q_gcd",
+    "erdos700_lower"
+   ],
+   "declarations_other_axioms": {},
+   "kernel_status": "VERIFIED"
+  },
+  {
+   "campaign": "erdos885-campaign-001",
+   "file": "theorems/erdos885-campaign-001/Erdos885Duality.lean",
+   "sha256": "dbe58a780586c0190fec9db50540ae7cc30904279c91d5300d1f929cf4935227",
+   "bytes": 1671,
+   "declarations_total": 1,
+   "declarations_clean_axioms": [
+    "erdos885_factor_difference_square"
+   ],
+   "declarations_other_axioms": {},
+   "kernel_status": "VERIFIED"
+  },
+  {
+   "campaign": "erdos936-campaign-001",
+   "file": "theorems/erdos936-campaign-001/Erdos936Congruence.lean",
+   "sha256": "78f4955ec217d4fe4473718e3841d681dd3560945073e2567460e59269c1da99",
+   "bytes": 1297,
+   "declarations_total": 2,
+   "declarations_clean_axioms": [
+    "erdos936_nine_dvd_iff",
+    "erdos936_period"
+   ],
+   "declarations_other_axioms": {},
+   "kernel_status": "VERIFIED"
+  },
+  {
+   "campaign": "erdos949-campaign-001",
+   "file": "theorems/erdos949-campaign-001/Erdos949Core.lean",
+   "sha256": "1ecd768748c9a6e5fa8a3bce983380ec1f61fb91febf3eb86f9ffd36ea16721d",
+   "bytes": 2922,
+   "declarations_total": 4,
+   "declarations_clean_axioms": [
+    "erdos949_finite_core",
+    "erdos949_five_sharp",
+    "erdos949_five_sharp_real",
+    "erdos949_universal"
+   ],
+   "declarations_other_axioms": {},
+   "kernel_status": "VERIFIED"
+  },
+  {
+   "campaign": "erdos949-campaign-001",
+   "file": "theorems/erdos949-campaign-001/Erdos949Hindman.lean",
+   "sha256": "46fce2c460643c34b5926828b4e09604a35b65b859199bf0beeab84b36803cdc",
+   "bytes": 8857,
+   "declarations_total": 13,
+   "declarations_clean_axioms": [
+    "blk_fst_strictMono",
+    "blk_succ_fst",
+    "blk_succ_snd",
+    "bsum_add_mem",
+    "bsum_mem",
+    "bsum_succ",
+    "bsum_zero",
+    "erdos949_countable_analogue",
+    "erdos949_countable_analogue_control",
+    "le_bsum",
+    "ypos_add_mem",
+    "ypos_mem",
+    "ypos_strictMono"
+   ],
+   "declarations_other_axioms": {},
+   "kernel_status": "VERIFIED"
+  },
+  {
+   "campaign": "erdos949-campaign-001",
+   "file": "theorems/erdos949-campaign-001/Erdos949HindmanFS.lean",
+   "sha256": "f4130c29f345afc9b264aa2331199433f6f0bfdd9dc7e224a49123a60970b9ac",
+   "bytes": 17296,
+   "declarations_total": 16,
+   "declarations_clean_axioms": [
+    "Erdos949HindmanFS.FS_drop_mono",
+    "Erdos949HindmanFS.blk_fst_strictMono",
+    "Erdos949HindmanFS.blk_succ_fst",
+    "Erdos949HindmanFS.blk_succ_snd",
+    "Erdos949HindmanFS.bsum_add_mem",
+    "Erdos949HindmanFS.bsum_mem",
+    "Erdos949HindmanFS.bsum_succ",
+    "Erdos949HindmanFS.bsum_zero",
+    "Erdos949HindmanFS.erdos949_countable_analogue",
+    "Erdos949HindmanFS.erdos949_countable_analogue_control",
+    "Erdos949HindmanFS.erdos949_hindman_full_finite_sums",
+    "Erdos949HindmanFS.erdos949_hindman_full_finite_sums_control",
+    "Erdos949HindmanFS.le_bsum",
+    "Erdos949HindmanFS.ypos_finset_sum_mem",
+    "Erdos949HindmanFS.ypos_mem",
+    "Erdos949HindmanFS.ypos_strictMono"
+   ],
+   "declarations_other_axioms": {},
+   "kernel_status": "VERIFIED"
+  }
+ ]
+}
