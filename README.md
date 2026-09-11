@@ -1,24 +1,38 @@
 # Erdős Lean theorem bank
 
-**79 kernel-verified Lean 4 declarations across 20 files and 15 Erdős problems.** Every declaration has a clean axiom footprint.
+**79 kernel-verified Lean 4 declarations across 20 files and 15 Erdős problems.** Every declaration in the formal core has a clean axiom footprint.
 
 Author: Jared Wilder. First public timestamp: 2026-09-10.
+
+## Important repository-layout note
+
+The **formal theorem-bank claim applies to `theorems/` and `MANIFEST.json`**, not automatically to every top-level file or directory in this repository.
+
+During the September 11 public-release sweep, several larger Markdown/JSON research programs were also mirrored into top-level directories here: Erdős–Gyárfás power cycles, #271 Stanley sequences, #500 Turán `(3,4)`, #595 fiber coherence, #738 frontier work, #77 Ramsey asymptotics, #1093 divisor-window material, and others.
+
+Those are valuable public mathematics, but repository location does **not** make them kernel-verified. Several have also become too large to remain editorially buried inside a repo whose primary identity is formal proof.
+
+See [`RESEARCH-MIRRORS.md`](RESEARCH-MIRRORS.md) for the routing map. The governing rule is:
+
+> **formal proof status follows the formal artifact; mathematical subject identity follows the problem/program.**
+
+Program-scale mirrors are being promoted toward focused subject repositories. Compact ordinary-math statements may instead route through `jaredwilder/erdos-proved-lemmas`; provenance archives remain provenance archives.
 
 Companion repositories:
 - https://github.com/jaredwilder/erdos152 — statement formalizations and semantic audit;
 - https://github.com/jaredwilder/lean-semantic-blades — source-fidelity checks for formalizations.
 
-## Axiom footprints
+## Axiom footprints of the formal core
 
-Every declaration was checked with `#print axioms` and depends only on
+Every declaration counted in the formal bank was checked with `#print axioms` and depends only on
 
 ```text
 {propext, Classical.choice, Quot.sound}.
 ```
 
-There is no `sorry`, no `native_decide`, and no hand-declared project axiom in the theorem files.
+There is no `sorry`, no `native_decide`, and no hand-declared project axiom in the counted theorem files.
 
-Each file normally ships with:
+Each formal theorem file normally ships with:
 
 - `.axioms.txt` — the axiom footprint of its declarations;
 - `.sha256` — file hash;
@@ -26,13 +40,13 @@ Each file normally ships with:
 
 One file, `theorems/erdos289-campaign-001/Erdos289Head.lean`, has its `.axioms.txt` but no `.verify.json`. Its five declarations all have the standard clean footprint; the missing item is the extra stored verification record, not the theorem source or axiom report.
 
-A recount on 2026-09-11 confirmed **20 files, 79 declarations, 79 clean footprints, and zero declarations carrying any other axiom**.
+A recount on 2026-09-11 confirmed **20 formal files, 79 declarations, 79 clean footprints, and zero counted declarations carrying any other axiom**.
 
-## Mathematical contents
+## Mathematical contents of the formal core
 
-The files contain structural lemmas, bounds, finite results, special cases, and standalone consequences arising from work on larger Erdős problems. Each statement has the scope written in the theorem itself.
+The Lean files contain structural lemmas, bounds, finite results, special cases, and standalone consequences arising from work on larger Erdős problems. Each statement has the scope written in the theorem itself.
 
-A particularly substantial group is the Erdős 949 material:
+A particularly substantial formal group is the Erdős 949 material:
 
 - `Erdos949Hindman.lean` proves a **countable analogue** via Mathlib's Hindman theorem in 13 declarations, together with a non-vacuity check;
 - `Erdos949HindmanFS.lean` strengthens this to **full finite sums** in 16 declarations.
@@ -43,9 +57,9 @@ The countable formulation was not found on the problem page during the author's 
 
 ## Reproducing the formal checks
 
-Each `.lean` file is self-contained against Mathlib. Compile a file and run `#print axioms` on any declaration; the result should agree with the shipped `.axioms.txt`.
+Each `.lean` file under `theorems/` is self-contained against Mathlib. Compile a file and run `#print axioms` on any declaration; the result should agree with the shipped `.axioms.txt`.
 
-## Contents
+## Counted formal files
 
 | problem | file | declarations | clean axiom footprint |
 |---|---|---:|---|
