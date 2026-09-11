@@ -1,20 +1,26 @@
-# Erdős #949 — verified Lean receipt ledger
+# Erdős #949 — verified Lean source and receipt ledger
 
 **Author:** Jared Wilder  
 **Recovered kernel audit:** September 2026  
-**Public formal-receipt release:** 2026-09-11
+**Public formal release:** 2026-09-11
 
-This directory records the already-executed Lean verification receipts for the #949 theorem cluster. The natural-language mathematics has a fuller public writeup at `jaredwilder/unpublished-math-papers/erdos949-sumfree-ip/`.
+The exact historical/reverified Lean source is now public under
 
-## 1. `Erdos949Core.lean`
+`theorems/erdos949-campaign-001/`.
 
-Recovered source path:
+The natural-language mathematics has a fuller public writeup at `jaredwilder/unpublished-math-papers/erdos949-sumfree-ip/`.
 
-```text
-oracle/evidence/msl-machine/campaigns/erdos949-campaign-001/kernel/Erdos949Core.lean
-```
+## 1. Sharp finite theorem — `Erdos949Core.lean`
 
-Kernel runner result:
+Public source:
+
+`theorems/erdos949-campaign-001/Erdos949Core.lean`
+
+Public verification receipt:
+
+`theorems/erdos949-campaign-001/Erdos949Core.verify.json`
+
+Recorded kernel result:
 
 ```text
 status=VERIFIED
@@ -42,17 +48,19 @@ Each declaration was reported clean with the ordinary Mathlib footprint
 
 and no `sorryAx`.
 
-The theorem content is the sharp finite statement: for every sum-free `S⊂R`, some integer `q` with `1<=q<=5` has both `q` and `2q` outside `S`, together with the sharpness witness `{1,4,6}` showing 5 cannot be replaced by 4.
+The universal theorem is the sharp statement: for every sum-free `S⊂R`, some integer `q` with `1<=q<=5` has both `q` and `2q` outside `S`. The sharpness declarations certify the witness `{1,4,6}` showing that 5 cannot be replaced by 4.
 
-## 2. `Erdos949Hindman.lean`
+## 2. Pairwise/countable theorem — `Erdos949Hindman.lean`
 
-Recovered source path:
+Public source:
 
-```text
-oracle/evidence/msl-machine/campaigns/erdos949-campaign-001/kernel/Erdos949Hindman.lean
-```
+`theorems/erdos949-campaign-001/Erdos949Hindman.lean`
 
-Kernel runner result:
+Public verification receipt:
+
+`theorems/erdos949-campaign-001/Erdos949Hindman.verify.json`
+
+Recorded kernel result:
 
 ```text
 status=VERIFIED
@@ -63,37 +71,68 @@ needsMathlib=true
 project=/root/erdosfire-bench/proofs
 ```
 
-Fourteen declarations were recorded, including:
+Fourteen declarations were recorded, including
 
 ```text
-bsum_zero
-bsum_succ
-bsum_mem
-bsum_add_mem
-le_bsum
-blk_succ_fst
-blk_succ_snd
-ypos_mem
-blk_fst_strictMono
-ypos_strictMono
-ypos_add_mem
 erdos949_countable_analogue
-above
 erdos949_countable_analogue_control
 ```
 
-The main theorem `erdos949_countable_analogue` and the controlled strengthening `erdos949_countable_analogue_control` were both reported clean with footprint
+The main theorem gives an infinite `A⊂N` outside `S` whose pairwise sums, including the diagonal case, stay outside `S`.
+
+## 3. Full finite-sums upgrade — `Erdos949HindmanFS.lean`
+
+This is the strongest formal theorem in the #949 packet.
+
+Public source:
+
+`theorems/erdos949-campaign-001/Erdos949HindmanFS.lean`
+
+Public verification receipt:
+
+`theorems/erdos949-campaign-001/Erdos949HindmanFS.verify.json`
+
+Recorded re-verification result:
+
+```text
+status=VERIFIED
+backend=scaleway-box
+project=/root/mathlib4
+exitCode=0
+seconds=6.83
+sorryFree=true
+sha256=f4130c29f345afc9b264aa2331199433f6f0bfdd9dc7e224a49123a60970b9ac
+replication runs=2
+identicalOutput=true
+```
+
+Main declaration:
+
+```text
+erdos949_hindman_full_finite_sums
+```
+
+It proves: for every sum-free `S⊆R`, there is an infinite set `A` of positive naturals such that for **every nonempty finite subset** `T⊆A`, both
+
+```text
+sum T
+2 * sum T
+```
+
+lie outside `S`.
+
+Equivalently, the full nonempty finite-sums set `FS(A)` is disjoint from `S`, and so is its double. This strictly strengthens the earlier pairwise `A+A` statement.
+
+The file re-derives `erdos949_countable_analogue` as a corollary, includes non-vacuity controls, is sorry-free, and was replayed twice with byte-identical stdout. The main theorem's axiom footprint is the ordinary Mathlib set
 
 ```text
 [propext, Classical.choice, Quot.sound]
 ```
 
-and no `sorryAx`.
+with no `sorryAx`.
 
 ## Authority boundary
 
-These are **green historical kernel receipts**, not merely source labels. They establish that the listed files compiled successfully under the recorded Mathlib environment with the listed axiom footprints.
+These are **actual public Lean source files plus green verification receipts**, not prose descriptions of missing artifacts.
 
-The original `.lean` file bytes have not yet been recovered as standalone Library objects in the current release session. This receipt ledger therefore does not fabricate source files from partial extracts. Recovering and mirroring the exact source bytes remains a separate provenance task.
-
-The continuum-cardinality parent problem is not claimed closed by these results.
+They establish formal verification in the recorded Mathlib environments. They do **not** establish historical novelty, and they do not solve the continuum-cardinality parent problem.
